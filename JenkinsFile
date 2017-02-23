@@ -1,0 +1,7 @@
+node('ruby') {
+  stage 'Checkout'
+    checkout scm
+    sh 'npm install'
+  stage 'Test'
+    sh 'ng test --single-run'
+}
